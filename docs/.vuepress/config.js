@@ -1,3 +1,5 @@
+const vuese = require('../../src/')
+
 module.exports = {
     base: '/markdown-it-vuese/',
     locales: {
@@ -11,8 +13,8 @@ module.exports = {
     ],
     markdown: {
         config: (md) => {
-            md.use(require('../../src/'))
-            md.use(require('../../src/'), {
+            md.use(vuese)
+            md.use(vuese, {
                 vueseRe: /<\[vuese-h3\]\((.+)\)/i,
                 ruleName: 'vuese-h3',
                 useRender: (vueseRender) => {
@@ -24,6 +26,7 @@ module.exports = {
             })
         },
     },
+    evergreen: true,
     serviceWorker: true,
     themeConfig: {
         repo: 'BuptStEve/markdown-it-vuese',
