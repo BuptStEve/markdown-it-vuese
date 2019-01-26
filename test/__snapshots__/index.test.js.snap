@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`markdown-it-vuese should render by useRender 1`] = `
+"<h3>props</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>The name of the form, up to 8 characters</td>
+<td><code>String</code> / <code>Number</code></td>
+<td><code>true</code></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3>slots</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Default Slot Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>Form header</td>
+<td><code>&lt;th&gt;title&lt;/th&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3>events</h3>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onclear</td>
+<td>Fire when the form is cleared</td>
+<td>The argument is a boolean value representing xxx</td>
+</tr>
+</tbody>
+</table>
+<h3>methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clear</td>
+<td>Used to manually clear the form</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>"
+`;
+
+exports[`markdown-it-vuese should render full documentation 1`] = `
+"<h1>MyComponent</h1>
+<h2>Props</h2>
+<p>&lt;!-- @vuese:MyComponent:props:start --&gt;</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>The name of the form, up to 8 characters</td>
+<td><code>String</code> / <code>Number</code></td>
+<td><code>true</code></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>&lt;!-- @vuese:MyComponent:props:end --&gt;</p>
+<h2>Events</h2>
+<p>&lt;!-- @vuese:MyComponent:events:start --&gt;</p>
+<table>
+<thead>
+<tr>
+<th>Event Name</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onclear</td>
+<td>Fire when the form is cleared</td>
+<td>The argument is a boolean value representing xxx</td>
+</tr>
+</tbody>
+</table>
+<p>&lt;!-- @vuese:MyComponent:events:end --&gt;</p>
+<h2>Slots</h2>
+<p>&lt;!-- @vuese:MyComponent:slots:start --&gt;</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Default Slot Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>Form header</td>
+<td><code>&lt;th&gt;title&lt;/th&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>&lt;!-- @vuese:MyComponent:slots:end --&gt;</p>
+<h2>Methods</h2>
+<p>&lt;!-- @vuese:MyComponent:methods:start --&gt;</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clear</td>
+<td>Used to manually clear the form</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>&lt;!-- @vuese:MyComponent:methods:end --&gt;</p>"
+`;

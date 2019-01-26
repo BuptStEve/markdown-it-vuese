@@ -1,0 +1,1 @@
+<[Vuese](@/test/MyComponent.vue)
