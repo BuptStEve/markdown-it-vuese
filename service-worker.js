@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "2eb57a2e3e3b70b21b9ff91a63cda21a"
+    "revision": "b3b7e287c922cea976835726f2e8c26b"
   },
   {
     "url": "assets/css/0.styles.42cd2b85.css",
@@ -60,28 +60,28 @@ self.__precacheManifest = [
     "revision": "08ca91b2e1033c741dc4a03483028a9d"
   },
   {
-    "url": "assets/js/app.82eb05b9.js",
-    "revision": "6bb2674c23a4646f5d975ee05d5feff1"
+    "url": "assets/js/app.a8ec5518.js",
+    "revision": "170bb32bfdee82522d305bc12f10cd2f"
   },
   {
     "url": "example/custom.html",
-    "revision": "0e57166c02e4a5ff1186b8f551449de8"
+    "revision": "43ecc2817668417c42b9104c1625b402"
   },
   {
     "url": "example/demo.html",
-    "revision": "a21cb556c9b247181006855424ff3ebd"
+    "revision": "e40b38158a46c1bf181920e626c5cba6"
   },
   {
     "url": "example/index.html",
-    "revision": "0bea11ae32a94c346e685dc0008bdcc7"
+    "revision": "992c905f6fb68db90900dc6f514f6471"
   },
   {
     "url": "example/vuepress.html",
-    "revision": "2622d723ab2110ec467889204fdda6c9"
+    "revision": "253695ebeed0ac5d4b13af4d06952747"
   },
   {
     "url": "index.html",
-    "revision": "07918cd48820449deaf01ec55f3ecf7c"
+    "revision": "36a19291be475bd5f8ddea68ac25776a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
