@@ -1,12 +1,10 @@
 const vuese = require('../../src/')
+const { name, description } = require('../../package.json')
 
 module.exports = {
-    base: '/markdown-it-vuese/',
+    base: '/' + name + '/',
     locales: {
-        '/': {
-            title: 'markdown-it-vuese',
-            description: '📖 Vuese plugin for markdown-it markdown parser.'
-        }
+        '/': { title: name, description }
     },
     head: [
         ['link', { rel: 'icon', href: `/favicon.ico` }],
@@ -29,7 +27,7 @@ module.exports = {
     evergreen: true,
     serviceWorker: true,
     themeConfig: {
-        repo: 'BuptStEve/markdown-it-vuese',
+        repo: 'BuptStEve/' + name,
         docsDir: 'docs',
         nav: [
             { text: 'Guide', link: '/' },

@@ -10,6 +10,8 @@
 
 > 此处的 `@` 默认值是 `process.cwd()`
 
+[实际效果请点击这里](https://buptsteve.github.io/markdown-it-vuese/example/)
+
 ## Install
 
 ```bash
