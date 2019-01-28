@@ -10,7 +10,7 @@
         "tdd": "cross-env NODE_ENV=test jest --watch",
         "test": "cross-env NODE_ENV=test jest",
         "lint": "eslint --fix src/ test/",
-        "deploy": "yarn docs:build && gh-pages -m \"[ci skip]\" -d docs/.vuepress/dist",
+        "deploy": "yarn docs:build && gh-pages -u \"BuptStEve <yangzhenyu2016@gmail.com>\" -m \"[ci skip]\" -d docs/.vuepress/dist",
         "prebuild": "rimraf dist/* & npm run test",
         "build": "cross-env NODE_ENV=production rollup -c",
         "pub": "npm run build && npm publish"
