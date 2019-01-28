@@ -32,6 +32,12 @@ module.exports = {
         nav: [
             { text: 'Guide', link: '/' },
             { text: 'Example', link: '/example/' },
+            {
+                text: 'Ecosystem',
+                items: [
+                    { text: 'demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' }
+                ],
+            },
         ],
         sidebarDepth: 2,
         sidebar: {
