@@ -1,5 +1,12 @@
 <h1 align="center">markdown-it-vuese</h1>
 
+<p align="center">
+    <a href="https://circleci.com/gh/BuptStEve/markdown-it-vuese/tree/master"><img src="https://img.shields.io/circleci/project/github/BuptStEve/markdown-it-vuese/master.svg" alt="Build Status"></a>
+    <a href="https://codecov.io/github/BuptStEve/markdown-it-vuese?branch=master"><img src="https://img.shields.io/codecov/c/github/BuptStEve/markdown-it-vuese/master.svg" alt="Coverage Status"></a>
+    <a href="https://www.npmjs.com/package/markdown-it-vuese"><img src="https://img.shields.io/npm/v/markdown-it-vuese.svg" alt="Version"></a>
+    <a href="https://www.npmjs.com/package/markdown-it-vuese"><img src="https://img.shields.io/npm/l/markdown-it-vuese.svg" alt="License"></a>
+</p>
+
 > [Vuese][1] plugin for [markdown-it][2] markdown parser.
 
 借助这个插件，你可以通过下述的语法在导入已经存在的 `*.vue` 文件的同时，使用 [Vuese][1] 自动生成文档。
