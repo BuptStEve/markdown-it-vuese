@@ -78,7 +78,7 @@ exports[`markdown-it-vuese should render by useRender 1`] = `
 exports[`markdown-it-vuese should render full documentation 1`] = `
 "<h1>MyComponent</h1>
 <h2>Props</h2>
-<p>&lt;!-- @vuese:MyComponent:props:start --&gt;</p>
+<!-- @vuese:MyComponent:props:start -->
 <table>
 <thead>
 <tr>
@@ -99,9 +99,9 @@ exports[`markdown-it-vuese should render full documentation 1`] = `
 </tr>
 </tbody>
 </table>
-<p>&lt;!-- @vuese:MyComponent:props:end --&gt;</p>
+<!-- @vuese:MyComponent:props:end -->
 <h2>Events</h2>
-<p>&lt;!-- @vuese:MyComponent:events:start --&gt;</p>
+<!-- @vuese:MyComponent:events:start -->
 <table>
 <thead>
 <tr>
@@ -118,9 +118,9 @@ exports[`markdown-it-vuese should render full documentation 1`] = `
 </tr>
 </tbody>
 </table>
-<p>&lt;!-- @vuese:MyComponent:events:end --&gt;</p>
+<!-- @vuese:MyComponent:events:end -->
 <h2>Slots</h2>
-<p>&lt;!-- @vuese:MyComponent:slots:start --&gt;</p>
+<!-- @vuese:MyComponent:slots:start -->
 <table>
 <thead>
 <tr>
@@ -137,9 +137,9 @@ exports[`markdown-it-vuese should render full documentation 1`] = `
 </tr>
 </tbody>
 </table>
-<p>&lt;!-- @vuese:MyComponent:slots:end --&gt;</p>
+<!-- @vuese:MyComponent:slots:end -->
 <h2>Methods</h2>
-<p>&lt;!-- @vuese:MyComponent:methods:start --&gt;</p>
+<!-- @vuese:MyComponent:methods:start -->
 <table>
 <thead>
 <tr>
@@ -156,5 +156,5 @@ exports[`markdown-it-vuese should render full documentation 1`] = `
 </tr>
 </tbody>
 </table>
-<p>&lt;!-- @vuese:MyComponent:methods:end --&gt;</p>"
+<!-- @vuese:MyComponent:methods:end -->"
 `;

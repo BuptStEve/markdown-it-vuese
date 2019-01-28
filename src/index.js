@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const markdownIt = require('markdown-it')
 const VueseRender = require('@vuese/markdown-render')
 const { parser: vueseParser } = require('@vuese/parser')
 
@@ -24,9 +25,8 @@ module.exports = (md, options = {}) => {
     md.renderer.rules[ruleName] = (tokens, idx) => {
         const { rawPath } = tokens[idx]
         const rawMd = getMdFromSfc(rawPath)
-        const res = md.render(rawMd)
-
-        return res.html || res
+        // close #2
+        return markdownIt({ html: true }).render(rawMd)
     }
 
     function getPathToken (state, startLine) {
