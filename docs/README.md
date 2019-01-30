@@ -7,7 +7,7 @@
     <a href="https://www.npmjs.com/package/markdown-it-vuese"><img src="https://img.shields.io/npm/l/markdown-it-vuese.svg" alt="License"></a>
 </p>
 
-English | [简体中文](./zh/README.md)
+English | [简体中文](./zh/)
 
 > [Vuese][1] plugin for [markdown-it][2] markdown parser.
 
@@ -19,7 +19,7 @@ With this plugin, you can use [Vuese][1] to automatically generate documents whi
 
 > The default value of @ is `process.cwd()`.
 
-[Please click here to see the demo](https://buptsteve.github.io/markdown-it-vuese/example/)
+[Please click here to see the demo](./example/demo.md)
 
 ## Install
 

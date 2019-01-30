@@ -7,7 +7,7 @@
     <a href="https://www.npmjs.com/package/markdown-it-vuese"><img src="https://img.shields.io/npm/l/markdown-it-vuese.svg" alt="License"></a>
 </p>
 
-[English](../README.md) | 简体中文
+[English](../) | 简体中文
 
 > [Vuese][1] plugin for [markdown-it][2] markdown parser.
 
@@ -19,7 +19,7 @@
 
 > 此处的 @ 默认值是 `process.cwd()`
 
-[实际效果请点击这里](https://buptsteve.github.io/markdown-it-vuese/example/)
+[实际效果请点击这里](./example/demo.md)
 
 ## Install
 
