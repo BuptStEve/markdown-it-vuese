@@ -7,17 +7,19 @@
     <a href="https://www.npmjs.com/package/markdown-it-vuese"><img src="https://img.shields.io/npm/l/markdown-it-vuese.svg" alt="License"></a>
 </p>
 
+English | [简体中文](./zh/README.md)
+
 > [Vuese][1] plugin for [markdown-it][2] markdown parser.
 
-借助这个插件，你可以通过下述的语法在导入已经存在的 `*.vue` 文件的同时，使用 [Vuese][1] 自动生成文档。
+With this plugin, you can use [Vuese][1] to automatically generate documents while importing existing `*.vue` files via following syntax.
 
 ```md
 <[vuese](@/filePath)
 ```
 
-> 此处的 @ 默认值是 `process.cwd()`
+> The default value of @ is `process.cwd()`.
 
-[实际效果请点击这里](https://buptsteve.github.io/markdown-it-vuese/example/)
+[Please click here to see the demo](https://buptsteve.github.io/markdown-it-vuese/example/)
 
 ## Install
 
@@ -55,30 +57,35 @@ const md = require('markdown-it')()
 ```
 
 ### root
-* 类型：`String`
-* 默认值：`process.cwd()`
+* Type: `String`
+* Default: `process.cwd()`
 
-根路径，路径中填写的 `@` 会被其替换。
+Root Directory, this value will replace the @ in file path.
 
 ### vueseRe
-* 类型：`RegExp`
-* 默认值：`/<\[vuese\]\((.+)\)/i`
+* Type: `RegExp`
+* Default: `/<\[vuese\]\((.+)\)/i`
 
-匹配正则，不满意默认匹配规则可以自定义。
+Regular expression, you can customize it as you like.
 
 ### ruleName
-* 类型：`String`
-* 默认值：`vuese`
+* Type: `String`
+* Default: `vuese`
 
-注册的规则名，使用场景是改写规则名，实现在同一份文档中使用不同规则，渲染出不同的结果。
+Rule name, it will be used by [markdown-it][2], so be careful not to duplicate [existing rules][9].
+
+Use it with `vueseRe`, we can use different rules in the same document to render different results.
 
 ```js
+const vuese = require('markdown-it-vuese')
+
 const md = require('markdown-it')()
-    // 默认渲染结果
-    .use(require('markdown-it-vuese'))
+    // default
+    // <[vuese](filePath)
+    .use(vuese)
     // <[vuese-h3](filePath)
-    // 自定义新规则，不需要标题，并将 Props 等属性从 <h2> 改成 <h3>
-    .use(require('markdown-it-vuese'), {
+    // No title, `Props` and other attributes should be changed from `<h2>` to `<h3>`
+    .use(vuese, {
         vueseRe: /<\[vuese-h3\]\((.+)\)/i,
         ruleName: 'vuese-h3',
         useRender: (vueseRender) => {
@@ -91,27 +98,33 @@ const md = require('markdown-it')()
 ```
 
 ### useParser
-* 类型：`Function`
-* 默认值：`null`
+* Type: `Function`
+* Default: `null`
 
-接受 [@vuese/parser 解析后的结果][7]。若存在，则直接运行后返回结果，否则尝试运行 `useRender`。
+It takes [@vuese/parser `ParserResult`][7] as a parameter.
+
+If `useParser` exists, it returns the result directly after running, otherwise try running `useRender'.
 
 ### useRender
-* 类型：`Function`
-* 默认值：`null`
+* Type: `Function`
+* Default: `null`
 
-接受 [@vuese/markdown-render 初始化后的渲染实例][8]。若存在，则直接运行后返回结果，否则尝试运行 `useAll`。
+It takes [@vuese/markdown-render `Render Class`][8] as a parameter.
 
-例如可以调用以下方法分别生成对象和 md
+If `useRender` exists, it returns the result directly after running, otherwise try running `useAll'.
 
-* `render`: 生成 `renderRes`
-* `renderMarkdown`: 生成 `markdownRes`
+For example, you can call the following methods to generate objects and markdown documents, respectively.
+
+* `render`: will generate `renderRes`
+* `renderMarkdown`: will generate `markdownRes`
 
 ### useAll
-* 类型：`Function`
-* 默认值：`null`
+* Type: `Function`
+* Default: `null`
 
-以对象形式接受以下参数 `content`（源文件内容）, `parserRes`, `renderRes`, `markdownRes`。若不存在则默认返回 `markdownRes.content`。
+It takes an object as parameters with there attributes: `content`(source file content), `parserRes`, `renderRes`, `markdownRes`.
+
+Return `markdownRes.content` by default, if `useAll` does not exist.
 
 ```js
 const md = require('markdown-it')()
@@ -128,28 +141,28 @@ const md = require('markdown-it')()
 ```
 
 ### parserOptions
-* 类型：`Object`
-* 默认值：`{}`
+* Type: `Object`
+* Default: `{}`
 
-透传 [@vuese/parser 的参数][5]
+It passes [@vuese/parser options][5]
 
 ### renderOptions
-* 类型：`Object`
-* 默认值：`{}`
+* Type: `Object`
+* Default: `{}`
 
-透传 [@vuese/markdown-render 的参数][6]
+It passes [@vuese/markdown-render options][6]
 
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) StEve Young
+Copyright (c) [StEve Young](https://github.com/BuptStEve)
 
 [1]: https://github.com/vuese/vuese
 [2]: https://github.com/markdown-it/markdown-it
 [3]: https://vuese.org/parser/
 [4]: https://vuese.org/markdown-render/
-[5]: https://vuese.org/zh/parser/#parseroptions
-[6]: https://vuese.org/zh/markdown-render/#renderoptions
-[7]: https://vuese.org/zh/parser/#parserresult
-[8]: https://vuese.org/zh/markdown-render/#render-%E7%B1%BB
+[5]: https://vuese.org/parser/#parseroptions
+[6]: https://vuese.org/markdown-render/#renderoptions
+[7]: https://vuese.org/parser/#parserresult
+[8]: https://vuese.org/markdown-render/#render-class

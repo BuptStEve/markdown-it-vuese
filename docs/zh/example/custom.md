@@ -1,12 +1,12 @@
-# Custom Rendering
+# 自定义渲染
 
-Using Vuese's default rendering results directly in the document may not be suitable for all scenarios.
+在文档中直接使用 Vuese 的默认渲染结果，可能无法适应全部的场景。
 
-## Requirements
+## 需求
 
-No title, `Props` and other attributes should be changed from `<h2>` to `<h3>`.
+不需要标题，并且想将 `Props` 等属性从 `<h2>` 改成 `<h3>`
 
-## Config
+## 配置
 
 ```js
 const md = require('markdown-it')()
@@ -22,16 +22,16 @@ const md = require('markdown-it')()
     })
 ```
 
-## Markdown
+## 文档
 
 ```md
 <[vuese-h3](@/test/MyComponent.vue)
 ```
 
 ::: tip
-Notice that we add a new vuese rule.
+注意我们新增了一条 vuese 规则
 :::
 
-## Result
+## 结果
 
 <[vuese-h3](@/test/MyComponent.vue)
