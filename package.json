@@ -1,6 +1,6 @@
 {
     "name": "markdown-it-vuese",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "📖 Vuese plugin for markdown-it markdown parser",
     "main": "dist/index.cjs.js",
     "scripts": {
