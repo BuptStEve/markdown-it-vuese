@@ -166,3 +166,4 @@ Copyright (c) [StEve Young](https://github.com/BuptStEve)
 [6]: https://vuese.org/markdown-render/#renderoptions
 [7]: https://vuese.org/parser/#parserresult
 [8]: https://vuese.org/markdown-render/#render-class
+[9]: https://markdown-it.github.io/markdown-it/#Renderer.prototype.rules
