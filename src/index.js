@@ -3,8 +3,8 @@
 const fs = require('fs')
 const path = require('path')
 const markdownIt = require('markdown-it')
-const VueseRender = require('@vuese/markdown-render')
 const { parser: vueseParser } = require('@vuese/parser')
+const { Render: VueseRender } = require('@vuese/markdown-render')
 
 const isFn = fn => typeof fn === 'function'
 
