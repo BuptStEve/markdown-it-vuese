@@ -1,10 +1,17 @@
 <h1 align="center">markdown-it-vuese</h1>
 
 <p align="center">
-    <a href="https://circleci.com/gh/BuptStEve/markdown-it-vuese/tree/master"><img src="https://img.shields.io/circleci/project/github/BuptStEve/markdown-it-vuese/master.svg" alt="Build Status"></a>
-    <a href="https://codecov.io/github/BuptStEve/markdown-it-vuese?branch=master"><img src="https://img.shields.io/codecov/c/github/BuptStEve/markdown-it-vuese/master.svg" alt="Coverage Status"></a>
-    <a href="https://www.npmjs.com/package/markdown-it-vuese"><img src="https://img.shields.io/npm/v/markdown-it-vuese.svg" alt="Version"></a>
-    <a href="https://www.npmjs.com/package/markdown-it-vuese"><img src="https://img.shields.io/npm/l/markdown-it-vuese.svg" alt="License"></a>
+    <a href="https://circleci.com/gh/BuptStEve/markdown-it-vuese/tree/master" target="_blank">
+        <img src="https://img.shields.io/circleci/project/github/BuptStEve/markdown-it-vuese/master.svg" alt="Build Status">
+    </a>
+    <a href="https://codecov.io/github/BuptStEve/markdown-it-vuese?branch=master" target="_blank">
+        <img src="https://img.shields.io/codecov/c/github/BuptStEve/markdown-it-vuese/master.svg" alt="Coverage Status">
+    </a>
+    <a href="https://www.npmjs.com/package/markdown-it-vuese" target="_blank">
+        <img src="https://badgen.net/npm/dm/markdown-it-vuese" alt="Downloads per month">
+        <img src="https://img.shields.io/npm/v/markdown-it-vuese.svg" alt="Version">
+        <img src="https://img.shields.io/npm/l/markdown-it-vuese.svg" alt="License">
+    </a>
 </p>
 
 English | [简体中文](./zh/)

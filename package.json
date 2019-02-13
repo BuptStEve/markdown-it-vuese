@@ -5,16 +5,19 @@
     "main": "dist/index.cjs.js",
     "files": ["src", "dist"],
     "scripts": {
+        "cov": "open coverage/lcov-report/index.html",
         "docs": "vuepress dev docs -h localhost",
         "docs:build": "vuepress build docs",
-        "cov": "open coverage/lcov-report/index.html",
-        "tdd": "cross-env NODE_ENV=test jest --watch",
         "test": "cross-env NODE_ENV=test jest",
+        "test:tdd": "cross-env NODE_ENV=test jest --watch",
         "lint": "eslint --fix src/ test/",
         "deploy": "yarn docs:build && gh-pages -u \"BuptStEve <yangzhenyu2016@gmail.com>\" -m \"[ci skip]\" -d docs/.vuepress/dist",
         "prebuild": "rimraf dist/* & npm run test",
         "build": "cross-env NODE_ENV=production rollup -c",
-        "pub": "npm run build && npm publish"
+        "next:pm": "npm --no-git-tag-version version preminor",
+        "next:pr": "npm --no-git-tag-version version prerelease",
+        "pub": "npm run build && npm publish",
+        "pub:n": "npm run build && npm publish --tag next"
     },
     "husky": {
         "hooks": {
@@ -53,7 +56,7 @@
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.0.1",
         "babel-jest": "^24.1.0",
-        "codecov": "^3.1.0",
+        "codecov": "^3.2.0",
         "cross-env": "^5.2.0",
         "eslint": "^5.13.0",
         "eslint-config-standard": "^12.0.0",
