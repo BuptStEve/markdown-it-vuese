@@ -47,7 +47,7 @@ module.exports = {
                     updatePopup: {
                         message: 'New content is available.',
                         buttonText: 'Refresh',
-                    }
+                    },
                 },
                 nav: [
                     { text: 'Guide', link: '/' },
@@ -55,7 +55,7 @@ module.exports = {
                     {
                         text: 'Ecosystem',
                         items: [
-                            { text: 'vuepress-plugin-demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' }
+                            { text: 'vuepress-plugin-demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' },
                         ],
                     },
                 ],
@@ -89,7 +89,7 @@ module.exports = {
                     {
                         text: '生态系统',
                         items: [
-                            { text: 'vuepress-plugin-demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' }
+                            { text: 'vuepress-plugin-demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' },
                         ],
                     },
                 ],
