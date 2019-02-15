@@ -14,7 +14,7 @@
     </a>
 </p>
 
-English | [简体中文](https://buptsteve.github.io/markdown-it-vuese/zh/)
+English | <a href="https://buptsteve.github.io/markdown-it-vuese/zh/">简体中文</a>
 
 > [Vuese][1] plugin for [markdown-it][2] markdown parser.
 
@@ -26,7 +26,7 @@ With this plugin, you can use [Vuese][1] to automatically generate documents whi
 
 > The default value of @ is `process.cwd()`.
 
-[Please click here to see the demo](https://buptsteve.github.io/markdown-it-vuese/example/)
+<a href="https://buptsteve.github.io/markdown-it-vuese/example/demo.html">Please click here to see the demo</a>
 
 ## Install
 

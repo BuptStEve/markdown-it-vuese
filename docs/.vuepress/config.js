@@ -15,7 +15,7 @@ module.exports = {
         ['link', { rel: 'icon', href: `/favicon.ico` }],
     ],
     markdown: {
-        config: (md) => {
+        extendMarkdown: (md) => {
             md.use(vuese)
             md.use(vuese, {
                 vueseRe: /<\[vuese-h3\]\((.+)\)/i,
@@ -27,6 +27,8 @@ module.exports = {
                     return Object.keys(renderRes).map(genMd).join('')
                 },
             })
+
+            md.use(require('markdown-it-include'))
         },
     },
     evergreen: true,

@@ -3,12 +3,15 @@
     "version": "0.2.3",
     "description": "📖 Vuese plugin for markdown-it markdown parser",
     "main": "dist/index.cjs.js",
-    "files": ["src", "dist"],
+    "files": [
+        "src",
+        "dist"
+    ],
     "scripts": {
         "cov": "open coverage/lcov-report/index.html",
-        "docs": "vuepress dev docs -h localhost",
+        "docs": "vuepress dev docs",
         "docs:build": "vuepress build docs",
-        "lint": "eslint --fix src/ test/",
+        "lint": "eslint --fix . --ignore-path .gitignore",
         "test": "cross-env NODE_ENV=test jest",
         "test:tdd": "cross-env NODE_ENV=test jest --watch",
         "prebuild": "rimraf dist/* & npm run test",
@@ -70,6 +73,7 @@
         "lint-staged": "^8.1.3",
         "markdown-it": "^8.4.2",
         "markdown-it-custom-block": "^0.1.1",
+        "markdown-it-include": "^1.0.0",
         "rimraf": "^2.6.3",
         "rollup": "^1.1.2",
         "rollup-plugin-babel": "^4.3.2",
@@ -79,7 +83,7 @@
         "rollup-plugin-node-resolve": "^4.0.0",
         "rollup-plugin-replace": "^2.1.0",
         "rollup-plugin-uglify": "^6.0.2",
-        "vuepress": "^0.14.8"
+        "vuepress": "^1.0.0-alpha.37"
     },
     "peerDependencies": {
         "markdown-it": "^8.4.2"
