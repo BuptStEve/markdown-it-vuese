@@ -7,6 +7,9 @@
     <a href="https://codecov.io/github/BuptStEve/markdown-it-vuese?branch=master" target="_blank">
         <img src="https://img.shields.io/codecov/c/github/BuptStEve/markdown-it-vuese/master.svg" alt="Coverage Status">
     </a>
+    <a href="https://david-dm.org/buptsteve/markdown-it-vuese" target="_blank">
+        <img src="https://david-dm.org/buptsteve/markdown-it-vuese.svg" alt="dependencies">
+    </a>
     <a href="https://www.npmjs.com/package/markdown-it-vuese" target="_blank">
         <img src="https://badgen.net/npm/dm/markdown-it-vuese" alt="Downloads per month">
         <img src="https://img.shields.io/npm/v/markdown-it-vuese.svg" alt="Version">
@@ -110,7 +113,7 @@ const md = require('markdown-it')()
 
 It takes [@vuese/parser `ParserResult`][7] as a parameter.
 
-If `useParser` exists, it returns the result directly after running, otherwise try running `useRender'.
+If `useParser` exists, it returns the result directly after running, otherwise try running `useRender`.
 
 ### useRender
 * Type: `Function`
@@ -118,7 +121,7 @@ If `useParser` exists, it returns the result directly after running, otherwise t
 
 It takes [@vuese/markdown-render `Render Class`][8] as a parameter.
 
-If `useRender` exists, it returns the result directly after running, otherwise try running `useAll'.
+If `useRender` exists, it returns the result directly after running, otherwise try running `useAll`.
 
 For example, you can call the following methods to generate objects and markdown documents, respectively.
 

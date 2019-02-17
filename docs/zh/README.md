@@ -7,6 +7,9 @@
     <a href="https://codecov.io/github/BuptStEve/markdown-it-vuese?branch=master" target="_blank">
         <img src="https://img.shields.io/codecov/c/github/BuptStEve/markdown-it-vuese/master.svg" alt="Coverage Status">
     </a>
+    <a href="https://david-dm.org/buptsteve/markdown-it-vuese" target="_blank">
+        <img src="https://david-dm.org/buptsteve/markdown-it-vuese.svg" alt="dependencies">
+    </a>
     <a href="https://www.npmjs.com/package/markdown-it-vuese" target="_blank">
         <img src="https://badgen.net/npm/dm/markdown-it-vuese" alt="Downloads per month">
         <img src="https://img.shields.io/npm/v/markdown-it-vuese.svg" alt="Version">

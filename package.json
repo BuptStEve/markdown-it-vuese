@@ -83,7 +83,7 @@
         "rollup-plugin-node-resolve": "^4.0.0",
         "rollup-plugin-replace": "^2.1.0",
         "rollup-plugin-uglify": "^6.0.2",
-        "vuepress": "^1.0.0-alpha.38"
+        "vuepress": "^1.0.0-alpha.39"
     },
     "peerDependencies": {
         "markdown-it": "^8.4.2"
