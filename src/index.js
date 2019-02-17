@@ -2,7 +2,6 @@
 
 const fs = require('fs')
 const path = require('path')
-const markdownIt = require('markdown-it')
 const { parser: vueseParser } = require('@vuese/parser')
 const { Render: VueseRender } = require('@vuese/markdown-render')
 
@@ -21,29 +20,28 @@ module.exports = (md, options = {}) => {
         renderOptions = {},
     } = options
 
-    md.block.ruler.before('fence', ruleName, getPathToken)
-    md.renderer.rules[ruleName] = (tokens, idx) => {
-        const { rawPath } = tokens[idx]
-        const rawMd = getMdFromSfc(rawPath)
-        // close #2
-        return markdownIt({ html: true }).render(rawMd)
-    }
+    md.core.ruler.after('inline', ruleName, (state) => {
+        if (!vueseRe.test(state.src)) return
 
-    function getPathToken (state, startLine) {
-        const pos = state.bMarks[startLine] + state.tShift[startLine]
-        const max = state.eMarks[startLine]
-        const match = vueseRe.exec(state.src.slice(pos, max))
+        for (let i = state.tokens.length - 1; i >= 0; i--) {
+            const token = state.tokens[i]
 
-        if (!match || match.length < 2) return false
+            if (token.type !== 'inline') continue
 
-        const rawPath = match[1].trim()
-        const token = state.push(ruleName, 'div', 0)
+            const match = vueseRe.exec(token.content)
+            if (!match || match.length < 2) continue
 
-        token.rawPath = rawPath
-        state.line = startLine + 1
+            const rawPath = match[1].trim()
+            const mdContent = getMdFromSfc(rawPath)
+            const vueseTokens = md.parse(mdContent)
 
-        return true
-    }
+            state.tokens = state.tokens
+                .slice(0, i - 1)
+                // replace tokens
+                .concat(vueseTokens)
+                .concat(state.tokens.slice(i + 2))
+        }
+    })
 
     function getMdFromSfc (rawPath) {
         const tmpPath = rawPath

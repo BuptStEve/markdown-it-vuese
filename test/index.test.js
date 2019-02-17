@@ -4,7 +4,7 @@ import path from 'path'
 import vuese from '../src/'
 
 describe('markdown-it-vuese', () => {
-    const md = Md().use(vuese)
+    const md = Md({ html: true }).use(vuese)
 
     describe('should', () => {
         it('render full documentation', async () => {

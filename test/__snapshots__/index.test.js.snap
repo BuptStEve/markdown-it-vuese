@@ -76,7 +76,8 @@ exports[`markdown-it-vuese should render by useRender 1`] = `
 `;
 
 exports[`markdown-it-vuese should render full documentation 1`] = `
-"<h1>MyComponent</h1>
+"<p>abc</p>
+<h1>MyComponent</h1>
 <h2>Props</h2>
 <!-- @vuese:MyComponent:props:start -->
 <table>
@@ -156,5 +157,6 @@ exports[`markdown-it-vuese should render full documentation 1`] = `
 </tr>
 </tbody>
 </table>
-<!-- @vuese:MyComponent:methods:end -->"
+<!-- @vuese:MyComponent:methods:end -->
+<p>efg</p>"
 `;
