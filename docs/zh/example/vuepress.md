@@ -35,5 +35,5 @@ module.exports = {
 
 临时解决方法就是保存一下对应的 markdown 文件。
 
-因为两者都是在 markdown 解析阶段完成的替换。因此页面没有收集到源文件的依赖（md 的 hash 没变），所以没法同步刷新页面内容。更多讨论请参阅 [issue 750](https://github.com/vuejs/vuepress/issues/750)
+因为两者都是在 markdown 解析阶段完成的替换。因此页面没有收集到源文件的依赖（md 的 hash 没变），所以没法同步刷新页面内容。更多讨论请参阅 [issue 1309](https://github.com/vuejs/vuepress/issues/1309)
 :::

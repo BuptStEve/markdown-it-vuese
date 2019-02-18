@@ -35,5 +35,5 @@ Note: There are currently the same problems with the [vuepress import code snipp
 
 The temporary solution is to save the corresponding markdown file.
 
-For more discussion, see [issue 750](https://github.com/vuejs/vuepress/issues/750)
+For more discussion, see [issue 1309](https://github.com/vuejs/vuepress/issues/1309)
 :::
