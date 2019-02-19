@@ -1,6 +1,17 @@
 const vuese = require('../../src/')
 const { name, description } = require('../../package.json')
 
+const ecosystemItems = [
+    { text: '📝vuepress-plugin-demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' },
+]
+
+const exampleChildren = [
+    '',
+    ['demo', 'Vuese Demo'],
+    'vuepress',
+    'custom',
+]
+
 module.exports = {
     base: '/' + name + '/',
     locales: {
@@ -40,8 +51,8 @@ module.exports = {
         sidebarDepth: 2,
         locales: {
             '/': {
-                selectText: 'Languages',
-                label: 'English',
+                selectText: '🤔Languages',
+                label: '🇺🇸English',
                 editLinkText: 'Edit this page on GitHub',
                 serviceWorker: {
                     updatePopup: {
@@ -50,61 +61,41 @@ module.exports = {
                     },
                 },
                 nav: [
-                    { text: 'Guide', link: '/' },
-                    { text: 'Example', link: '/example/' },
-                    {
-                        text: 'Ecosystem',
-                        items: [
-                            { text: 'vuepress-plugin-demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' },
-                        ],
-                    },
+                    { text: '🌱Guide', link: '/' },
+                    { text: '🧐Example', link: '/example/' },
+                    { text: '🔥Ecosystem', items: ecosystemItems },
                 ],
                 sidebar: {
                     '/example/': [{
-                        title: 'Example',
+                        title: '🧐Example',
                         collapsable: false,
-                        children: [
-                            '',
-                            ['demo', 'Vuese Demo'],
-                            'vuepress',
-                            'custom',
-                        ],
+                        children: exampleChildren,
                     }],
-                    '/': [['', 'Guide']],
+                    '/': [['', '🌱Guide']],
                 },
             },
             '/zh/': {
-                selectText: '选择语言',
-                label: '简体中文',
+                selectText: '🤔选择语言',
+                label: '🇨🇳简体中文',
                 editLinkText: '在 GitHub 上编辑此页',
                 serviceWorker: {
                     updatePopup: {
-                        message: '发现新内容可用。',
+                        message: '文档有更新。',
                         buttonText: '刷新',
                     },
                 },
                 nav: [
-                    { text: '指南', link: '/zh/' },
-                    { text: '示例', link: '/zh/example/' },
-                    {
-                        text: '生态系统',
-                        items: [
-                            { text: 'vuepress-plugin-demo-code', link: 'https://buptsteve.github.io/vuepress-plugin-demo-code/' },
-                        ],
-                    },
+                    { text: '🌱指南', link: '/zh/' },
+                    { text: '🧐示例', link: '/zh/example/' },
+                    { text: '🔥生态系统', items: ecosystemItems },
                 ],
                 sidebar: {
                     '/zh/example/': [{
-                        title: 'Example',
+                        title: '🧐示例',
                         collapsable: false,
-                        children: [
-                            '',
-                            ['demo', '默认渲染结果'],
-                            'vuepress',
-                            'custom',
-                        ],
+                        children: exampleChildren,
                     }],
-                    '/zh/': [['', 'Guide']],
+                    '/zh/': [['', '🌱Guide']],
                 },
             },
         },

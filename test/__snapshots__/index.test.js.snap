@@ -78,6 +78,7 @@ exports[`markdown-it-vuese should render by useRender 1`] = `
 exports[`markdown-it-vuese should render full documentation 1`] = `
 "<p>abc</p>
 <h1>MyComponent</h1>
+<p>This is a description of the component</p>
 <h2>Props</h2>
 <!-- @vuese:MyComponent:props:start -->
 <table>

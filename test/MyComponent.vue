@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// This is a description of the component
 export default {
   name: 'MyComponent',
   props: {

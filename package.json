@@ -46,7 +46,7 @@
         ]
     },
     "dependencies": {
-        "@vuese/markdown-render": "^2.0.3",
+        "@vuese/markdown-render": "^2.1.0",
         "@vuese/parser": "^2.0.2"
     },
     "devDependencies": {
@@ -60,7 +60,7 @@
         "babel-jest": "^24.1.0",
         "codecov": "^3.2.0",
         "cross-env": "^5.2.0",
-        "eslint": "^5.14.0",
+        "eslint": "^5.14.1",
         "eslint-config-standard": "^12.0.0",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-node": "^8.0.1",
@@ -75,7 +75,7 @@
         "markdown-it-custom-block": "^0.1.1",
         "markdown-it-include": "^1.0.1",
         "rimraf": "^2.6.3",
-        "rollup": "^1.2.0",
+        "rollup": "^1.2.2",
         "rollup-plugin-babel": "^4.3.2",
         "rollup-plugin-commonjs": "^9.2.0",
         "rollup-plugin-eslint": "^5.0.0",
