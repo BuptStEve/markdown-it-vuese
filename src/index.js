@@ -33,7 +33,7 @@ module.exports = (md, options = {}) => {
 
             const rawPath = match[1].trim()
             const mdContent = getMdFromSfc(rawPath)
-            const vueseTokens = md.parse(mdContent)
+            const vueseTokens = md.parse(mdContent, {})
 
             state.tokens = state.tokens
                 .slice(0, i - 1)
