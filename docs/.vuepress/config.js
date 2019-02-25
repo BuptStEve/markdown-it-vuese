@@ -39,7 +39,9 @@ module.exports = {
                 },
             })
 
-            md.use(require('markdown-it-include'))
+            md.use(require('markdown-it-include'), {
+                includeRe: /<\[include\]\((.+)\)/i,
+            })
         },
     },
     evergreen: true,
