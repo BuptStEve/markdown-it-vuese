@@ -20,36 +20,54 @@ module.exports = (md, options = {}) => {
         renderOptions = {},
     } = options
 
-    md.core.ruler.after('inline', ruleName, (state) => {
-        if (!vueseRe.test(state.src)) return
+    md.block.ruler.before('fence', ruleName, getPathToken)
+    md.renderer.rules[ruleName] = (tokens, idx, _, env) => {
+        const { rawPath } = tokens[idx]
+        const filePath = getFilePath(rawPath)
+        const rawMd = getMdFromSfc(filePath)
 
-        for (let i = state.tokens.length - 1; i >= 0; i--) {
-            const token = state.tokens[i]
-
-            if (token.type !== 'inline') continue
-
-            const match = vueseRe.exec(token.content)
-            if (!match || match.length < 2) continue
-
-            const rawPath = match[1].trim()
-            const mdContent = getMdFromSfc(rawPath)
-            const vueseTokens = md.parse(mdContent, {})
-
-            state.tokens = state.tokens
-                .slice(0, i - 1)
-                // replace tokens
-                .concat(vueseTokens)
-                .concat(state.tokens.slice(i + 2))
+        /* istanbul ignore next */
+        if (env.loader) {
+            // for @vuepress/markdown-loader
+            env.loader.addDependency(filePath)
         }
-    })
 
-    function getMdFromSfc (rawPath) {
+        // save attributes, like hoistedTags
+        const tmpMd = Object.assign({}, md)
+        const res = md.render(rawMd, env)
+
+        // restore attributes
+        Object.assign(md, tmpMd)
+
+        return res.html || res
+    }
+
+    function getFilePath (rawPath) {
         const tmpPath = rawPath
             .replace(/^['|"]/, '')
             .replace(/['|"]$/, '')
             .replace(/^@/, root)
-        const filePath = path.resolve(root, tmpPath)
 
+        return path.resolve(root, tmpPath)
+    }
+
+    function getPathToken (state, startLine) {
+        const pos = state.bMarks[startLine] + state.tShift[startLine]
+        const max = state.eMarks[startLine]
+        const match = vueseRe.exec(state.src.slice(pos, max))
+
+        if (!match || match.length < 2) return false
+
+        const rawPath = match[1].trim()
+        const token = state.push(ruleName, 'div', 0)
+
+        token.rawPath = rawPath
+        state.line = startLine + 1
+
+        return true
+    }
+
+    function getMdFromSfc (filePath) {
         if (!fs.existsSync(filePath)) return `Not found: ${filePath}`
 
         try {
