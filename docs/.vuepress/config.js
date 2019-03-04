@@ -54,8 +54,8 @@ module.exports = {
         sidebarDepth: 2,
         locales: {
             '/': {
-                selectText: '🤔Languages',
-                label: '🇺🇸English',
+                selectText: '🌍Languages',
+                label: 'English',
                 editLinkText: 'Edit this page on GitHub',
                 serviceWorker: {
                     updatePopup: {
@@ -78,8 +78,8 @@ module.exports = {
                 },
             },
             '/zh/': {
-                selectText: '🤔选择语言',
-                label: '🇨🇳简体中文',
+                selectText: '🌍选择语言',
+                label: '简体中文',
                 editLinkText: '在 GitHub 上编辑此页',
                 serviceWorker: {
                     updatePopup: {
